@@ -1,3 +1,3 @@
-import "./xx/hello"
+import "./xx/hello";
 
 console.log("Hello");
