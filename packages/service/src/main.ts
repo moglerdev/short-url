@@ -56,7 +56,7 @@ app.post("/links/create", async (_req, res) => {
   res.json({
     code: 200,
     message: "OK",
-    payload: { key, url: `${_req.protocol}://${_req.get("host")}/${id}` },
+    payload: { key, url: `${_req.protocol}://${_req.get("host")}/${key}` },
   });
   console.log("[POST] /links/create", url);
 });
