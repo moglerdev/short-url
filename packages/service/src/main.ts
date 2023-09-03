@@ -30,6 +30,7 @@ app.get("/links/all", async (_req, res) => {
   res.json(x.map((x) => ({
     key: x.key,
     value: x.value,
+    accessCount: x.accessCount,
     url: `${_req.protocol}://${_req.get("host")}/${x.key}`
   })));
   console.log("[GET] /links/all");
@@ -82,12 +83,14 @@ app.get("/links/read/:code", async (_req, res) => {
 
 app.get("/:code", async (_req, res) => {
   const x = await links.getShortLink(_req.params.code);
-  if (x) res.redirect(x);
-  else {
+  if (!x) {
     res.statusCode = 404;
     res.send("Not found");
+    return;
   }
   console.log("[GET] /:code", _req.params.code);
+  res.redirect(x);
+  await links.addAccessCount(_req.params.code);
 });
 
 app.get("/_/:path", (_req, res) => {
