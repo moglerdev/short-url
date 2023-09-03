@@ -8,7 +8,7 @@
     "prettier": "pnpm exec prettier . --write"
   },
   "keywords": [],
-  "author": "",
+  "author": "Christopher Jaeger <christopher@mogler.dev>",
   "license": "ISC",
   "devDependencies": {
     "@swc/cli": "^0.1.62",

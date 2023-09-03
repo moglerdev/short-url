@@ -8,7 +8,7 @@
     "dev": "ts-node-esm --swc ./src/main.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Christopher Jaeger <christopher@mogler.dev>",
   "license": "ISC",
   "dependencies": {
     "@types/cors": "^2.8.13",
