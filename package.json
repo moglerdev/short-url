@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "pnpm exec prettier . --write"
+    "prettier": "pnpm exec prettier . --write",
+    "start": "pnpm --stream --filter service --filter ui dev"
   },
   "keywords": [],
   "author": "Christopher Jaeger <christopher@mogler.dev>",
